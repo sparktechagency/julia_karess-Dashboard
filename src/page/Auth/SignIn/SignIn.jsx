@@ -124,7 +124,7 @@ const SignIn = () => {
             </div>
 
             <Form.Item>
-              <button loading={isLoading} className="w-full bg-[#2cb5eb] text-xl font-semibold text-white  rounded-md py-2" border={true}>
+              <button loading={isLoading} className="w-full bg-[#344f47] text-xl font-semibold text-white  rounded-md py-2" border={true}>
                 Login
               </button>
             </Form.Item>
