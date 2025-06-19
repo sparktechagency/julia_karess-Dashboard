@@ -9,10 +9,10 @@ const Status = () => {
     <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
 
       {/* Total Renter User Card */}
-      <div className="shadow-[0_4px_10px_rgba(0,0,0,0.2)] p-5 rounded-lg border-2 border-[#2cb5eb] bg-white">
+      <div className="shadow-[0_4px_10px_rgba(0,0,0,0.2)] p-5 rounded-lg border-2 border-[#344f47] bg-white">
         <div className="flex items-center gap-5 ">
           <img src={dashboardIcon} className="w-16" alt="" />
-          <h2 className="text-2xl font-semibold">Total  Renter user</h2>
+          <h2 className="text-2xl font-semibold">Total user</h2>
         </div>
         <div className="flex items-center mt-5 gap-3">
           <h1 className="text-4xl font-semibold text-[#222222]">
@@ -23,10 +23,10 @@ const Status = () => {
         </div>
       </div>
       {/* Total Renter User Card */}
-      <div className="shadow-[0_4px_10px_rgba(0,0,0,0.2)] p-5 rounded-lg border-2 border-[#2cb5eb] bg-white">
+      <div className="shadow-[0_4px_10px_rgba(0,0,0,0.2)] p-5 rounded-lg border-2 border-[#344f47] bg-white">
         <div className="flex items-center gap-5">
           <img src={dashboardIcon} className="w-16" alt="" />
-          <h2 className="text-2xl font-semibold">Total Apartment Owner</h2>
+          <h2 className="text-2xl font-semibold">Baby Cuse</h2>
         </div>
         <div className="flex items-center mt-5 gap-3">
           <h1 className="text-4xl font-semibold text-[#222222]">
@@ -36,10 +36,10 @@ const Status = () => {
         </div>
       </div>
       {/* Total Renter User Card */}
-      <div className="shadow-[0_4px_10px_rgba(0,0,0,0.2)] p-5 rounded-lg border-2 border-[#2cb5eb] bg-white">
+      <div className="shadow-[0_4px_10px_rgba(0,0,0,0.2)] p-5 rounded-lg border-2 border-[#344f47] bg-white">
         <div className="flex items-center gap-5">
           <img src={dashboardIcon} className="w-16" alt="" />
-          <h2 className="text-2xl font-semibold">Total  Apartment Creator</h2>
+          <h2 className="text-2xl font-semibold">Total  Milestone</h2>
         </div>
         <div className="flex items-center mt-5 gap-3">
           <h1 className="text-4xl font-semibold text-[#222222]">

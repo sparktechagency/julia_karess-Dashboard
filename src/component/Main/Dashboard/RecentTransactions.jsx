@@ -2,6 +2,7 @@ import { ConfigProvider, Table, Pagination, Space, message, Modal, Button } from
 import { useState } from "react";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import dayjs from "dayjs"; // Ensure dayjs is imported
+import { IoEyeOutline } from "react-icons/io5";
 
 const RecentTransactions = () => {
   const [searchText, setSearchText] = useState("");
@@ -83,7 +84,7 @@ const RecentTransactions = () => {
       render: (_, record) => (
         <Space size="middle" className="flex flex-row justify-center">
           <button onClick={() => viewDetails(record)}>
-            <HiOutlineDotsHorizontal className="text-2xl" />
+            <IoEyeOutline className="text-2xl" />
           </button>
         </Space>
       ),
@@ -126,7 +127,7 @@ const RecentTransactions = () => {
         theme={{
           components: {
             Table: {
-              headerBg: "#72cdf2",
+              headerBg: "#344f47",
               headerColor: "#fff",
               headerBorderRadius: 5,
             },

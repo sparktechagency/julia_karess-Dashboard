@@ -97,20 +97,20 @@ const Users = () => {
         <Form layout="inline" className="flex space-x-4">
           <Item name="date">
             <DatePicker
-              className="rounded-md border border-[#92b8c0]"
+              className="rounded-md border border-[#344f47]"
               onChange={(date) => setSelectedDate(date)}
               placeholder="Select Date"
             />
           </Item>
           <Item name="username">
             <Input
-              className="rounded-md w-[70%] md:w-full border border-[#92b8c0]"
+              className="rounded-md w-[70%] md:w-full border border-[#344f47]"
               placeholder="User Name"
               onChange={(e) => setSearchText(e.target.value)}
             />
           </Item>
           <Item>
-            <button className="size-8 rounded-full flex justify-center items-center bg-[#92b8c0] text-black">
+            <button className="size-8 rounded-full flex justify-center items-center bg-[#344f47] text-white">
               <IoIosSearch className="size-5" />
             </button>
           </Item>
@@ -122,7 +122,7 @@ const Users = () => {
           theme={{
             components: {
               Table: {
-                headerBg: "#72cdf2",
+                headerBg: "#344f47",
                 headerColor: "#fff",
                 headerBorderRadius: 5,
               },
@@ -146,9 +146,9 @@ const Users = () => {
 
         {/* User Details Section */}
         <div className={`${detailsVisible ? "block" : "hidden"} duration-500`}>
-          <div className=" w-full md:w-2/4 mx-auto border-2 border-[#39ceec] p-2 rounded-lg relative">
+          <div className=" w-full md:w-2/4 mx-auto border-2 border-[#344f47] p-2 rounded-lg relative">
 
-            <div onClick={() => setDetailsVisible(false)} className="absolute bg-[#39ceec] p-3 rounded-full -top-5 -left-5 cursor-pointer" >
+            <div onClick={() => setDetailsVisible(false)} className="absolute bg-[#344f47] text-white p-3 rounded-full -top-5 -left-5 cursor-pointer" >
               <FaArrowLeft className="text-2xl" />
             </div>
 
@@ -167,27 +167,27 @@ const Users = () => {
 
             {/* User Details Section */}
             <div className="space-y-3">
-              <div className="flex items-center justify-between py-3 border-b-2 border-[#00000042]">
+              <div className="flex items-center justify-between py-3 border-2 px-3 rounded-lg border-[#00000042]">
                 <span className="font-semibold">Name</span>
                 <span>{userDataFull?.fullName}</span>
               </div>
-              <div className="flex items-center justify-between py-3 border-b-2 border-[#00000042]">
+              <div className="flex items-center justify-between py-3 border-2 px-3 rounded-lg border-[#00000042]">
                 <span className="font-semibold">Email</span>
                 <span>{userDataFull?.email}</span>
               </div>
-              <div className="flex items-center justify-between py-3 border-b-2 border-[#00000042]">
+              <div className="flex items-center justify-between py-3 border-2 px-3 rounded-lg border-[#00000042]">
                 <span className="font-semibold">Status</span>
                 <span>{userDataFull?.status}</span>
               </div>
-              <div className="flex items-center justify-between py-3 border-b-2 border-[#00000042]">
+              <div className="flex items-center justify-between py-3 border-2 px-3 rounded-lg border-[#00000042]">
                 <span className="font-semibold">Phone Number</span>
                 <span>{userDataFull?.phoneNumber}</span>
               </div>
-              <div className="flex items-center justify-between py-3 border-b-2 border-[#00000042]">
+              <div className="flex items-center justify-between py-3 border-2 px-3 rounded-lg border-[#00000042]">
                 <span className="font-semibold">User Type</span>
                 <span>{userDataFull?.gender}</span>
               </div>
-              <div className="flex items-center justify-between py-3 border-b-2 border-[#00000042]">
+              <div className="flex items-center justify-between py-3 border-2 px-3 rounded-lg border-[#00000042]">
                 <span className="font-semibold">Joining Date</span>
                 <span>{moment(userDataFull?.createdAt).format("DD MMM YYYY")}</span>
               </div>

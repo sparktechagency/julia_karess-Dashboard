@@ -27,8 +27,8 @@ const sidebarItems = [
   },
   {
     path: "/users",
-    name: "Resent User",
-    icon: <FaUserAlt className="size-6" />,
+    name: "User List",
+    icon: <FaUsers className="size-6" />,
   },
 
   {
@@ -84,7 +84,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               key={item.name}
               to={item.path}
               className={({ isActive }) =>
-                `w-[80%] mx-auto px-5 py-2 flex justify-start items-center gap-3 text-black ${isActive ? " !text-white rounded-md bg-[#2cb5eb] " : ""
+                `w-[80%] mx-auto px-5 py-2 flex justify-start items-center gap-3 text-black ${isActive ? " !text-white rounded-md bg-[#344f47] " : ""
                 }`
               }
             >
@@ -106,7 +106,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 overflow-y-auto left-0 z-40 w-64 h-full bg-[#038c6d] shadow-lg transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 overflow-y-auto left-0 z-40 w-64 h-full bg-[#344f47] shadow-lg transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           } transition-transform duration-300 ease-in-out md:hidden`}
       >
         <div onClick={toggleSidebar} className="absolute top-0 right-0 p-4">
@@ -122,7 +122,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               to={item.path}
               onClick={toggleSidebar} // Close sidebar on link click
               className={({ isActive }) =>
-                `w-[70%] mx-auto px-5 py-2 flex items-center gap-3 text-white ${isActive ? "bg-[#038c6d] " : ""
+                `w-[70%] mx-auto px-5 py-2 flex items-center gap-3 text-white ${isActive ? "bg-[#344f47] " : ""
                 }`
               }
             >

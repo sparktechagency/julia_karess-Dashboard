@@ -10,13 +10,13 @@ const Piechart =() =>{
   const circumference = 2 * Math.PI * radius;
  
   return (
-    <div className="col-span-full md:col-span-2 border-2 border-[#2cb5eb] rounded-lg shadow-[0_4px_10px_rgba(0,0,0,0.2)]">
+    <div className="col-span-full md:col-span-2 border-2 border-[#344f47] rounded-lg shadow-[0_4px_10px_rgba(0,0,0,0.2)]">
       <div className="bg-white rounded-3xl p-8 ">
         {/* Metrics Section */}
         <div className="space-y-5 mb-10">
           {metrics.map((metric, index) => (
             <div key={index} className="flex items-start">
-              <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+              <div className="w-2 h-2 bg-[#344f47] rounded-full mt-2 mr-4 flex-shrink-0"></div>
               <div>
                 <div className="text-sm text-gray-500 mb-1">{metric.label}</div>
                 <div className="text-3xl font-bold text-gray-900">{metric.value}</div>
@@ -44,7 +44,7 @@ const Piechart =() =>{
                 cx="50"
                 cy="50"
                 r={radius}
-                stroke="#2cb5eb"
+                stroke="#344f47"
                 strokeWidth="8"
                 fill="transparent"
                 strokeDasharray={`${circumference * 0.35} ${circumference}`}
@@ -57,7 +57,7 @@ const Piechart =() =>{
                 cx="50"
                 cy="50"
                 r={radius}
-                stroke="#72cdf2"
+                stroke="#ccc49d"
                 strokeWidth="8"
                 fill="transparent"
                 strokeDasharray={`${circumference * 0.30} ${circumference}`}

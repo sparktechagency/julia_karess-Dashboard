@@ -1,51 +1,38 @@
-/* eslint-disable react/prop-types */
-import { DatePicker } from "antd";
 import { Line } from '@ant-design/plots';
-import { useState } from "react";
-import dayjs from 'dayjs'; // Ensure dayjs is imported
-
-// Custom Tooltip Component
-const CustomTooltip = ({ active, payload, label }) => {
-  if (active && payload && payload.length) {
-    return (
-      <div className="custom-tooltip bg-white p-2 border border-gray-300 rounded shadow-lg">
-        <p className="label font-semibold">{`Month: ${label}`}</p>
-        <p className="intro">{`Total Income: $${payload[0].value.toLocaleString()}`}</p>
-      </div>
-    );
-  }
-  return null;
-};
+import React from 'react';
 
 const IncomeGraphChart = () => {
-  const [selectedYear, setSelectedYear] = useState(dayjs(new Date()).year()); // Initialize selected year as current year
+  // Flatten the data into two series (income and expenses) for each year
+  const data = [
+    { year: '1991', value: 8, type: 'income' },
+    { year: '1992', value: 9, type: 'income' },
+    { year: '1993', value: 9.1, type: 'income' },
+    { year: '1994', value: 10, type: 'income' },
+    { year: '1995', value: 12, type: 'income' },
+    { year: '1996', value: 12.9, type: 'income' },
+    { year: '1997', value: 12.9, type: 'income' },
 
-  // Demo data for income (replace the real API call with this static data)
-  const demoData = [
-    { month: "Jan", totalEarnings: 5000 },
-    { month: "Feb", totalEarnings: 4000 },
-    { month: "Mar", totalEarnings: 7000 },
-    { month: "Apr", totalEarnings: 8000 },
-    { month: "May", totalEarnings: 9000 },
-    { month: "Jun", totalEarnings: 10000 },
-    { month: "Jul", totalEarnings: 11000 },
-    { month: "Aug", totalEarnings: 10000 },
-    { month: "Sep", totalEarnings: 9000 },
-    { month: "Oct", totalEarnings: 14000 },
-    { month: "Nov", totalEarnings: 15000 },
-    { month: "Dec", totalEarnings: 16000 }
+    { year: '1991', value: 5, type: 'expenses' },
+    { year: '1992', value: 6, type: 'expenses' },
+    { year: '1993', value: 6.2, type: 'expenses' },
+    { year: '1994', value: 6.5, type: 'expenses' },
+    { year: '1995', value: 7, type: 'expenses' },
+    { year: '1996', value: 7.5, type: 'expenses' },
+    { year: '1997', value: 8, type: 'expenses' },
   ];
 
-  // Prepare data for chart based on the demo data
-  const chartData = demoData.map((item) => ({
-    month: item.month,
-    income: item.totalEarnings,
-  }));
-
   const config = {
-    data: chartData,
-    xField: 'month',
-    yField: 'income',
+    data,
+    xField: 'year', // The x-axis field is year
+    yField: 'value', // The y-axis field is the value (income or expenses)
+    seriesField: 'type', // Distinguish between income and expenses based on the 'type' field
+    shape: 'smooth', // Smooth line style
+
+    scale: {
+      y: {
+        domainMin: 0,
+      },
+    },
     interaction: {
       tooltip: {
         marker: false,
@@ -53,29 +40,29 @@ const IncomeGraphChart = () => {
     },
     style: {
       lineWidth: 2,
-      stroke: '#2cb5eb',
     },
-    area: {
-      style: {
-        fill: 'linear-gradient(-90deg, white 0%, #2cb5eb 100%)',
+    // Enable the legend to distinguish between income and expenses
+    legend: {
+      position: 'top-left',
+      itemName: {
+        style: {
+          fill: '#000', // Legend text color
+        },
       },
     },
-    tooltip: {
-      customContent: (title, items) => <CustomTooltip active={true} payload={items} label={title} />,
+    // Define the colors explicitly based on the `type`
+    color: (datum) => {
+      if (datum.type === 'income') {
+        return '#4caf50'; // Green color for "income"
+      } else if (datum.type === 'expenses') {
+        return '#ff9800'; // Orange color for "expenses"
+      }
     },
-  };
-
-  const handleDateChange = (date) => {
-    if (date) {
-      setSelectedYear(date.year()); // Get year from the selected dayjs object
-    }
   };
 
   return (
-    <section className="w-full col-span-full md:col-span-4 bg-white rounded-lg border-2 border-[#2cb5eb] shadow-[0_4px_10px_rgba(0,0,0,0.2)]">
-      <div className="pr-4 py-4">
-        <Line {...config} />
-      </div>
+    <section className="w-full col-span-full md:col-span-4 bg-white rounded-lg border-2 border-[#344f47] shadow-[0_4px_10px_rgba(0,0,0,0.2)]">
+      <Line {...config} />
     </section>
   );
 };
