@@ -129,13 +129,13 @@ const Subscription = () => {
             <div className="w-full md:flex justify-end items-center gap-2 flex-wrap py-6">
                 <Link
                     to="/subscription/user-list"
-                    className="text-xl px-2 md:px-5 py-3 border border-[#2cb5eb] text-[#2cb5eb] flex justify-center items-center gap-1 rounded md:mb-0"
+                    className="text-xl px-2 md:px-5 py-3 border border-[#344f47] text-[#344f47] flex justify-center items-center gap-1 rounded md:mb-0"
                 >
                     Subscriptions User
                 </Link>
                 <button
                     type="button"
-                    className="text-xl px-2 md:px-5 py-3 bg-[#2cb5eb] text-white flex justify-center items-center gap-1 rounded md:mb-0"
+                    className="text-xl px-2 md:px-5 py-3 bg-[#344f47] text-white flex justify-center items-center gap-1 rounded md:mb-0"
                     onClick={() => showModal(false)}
                 >
                     <FaPlus className="text-xl font-semibold text-white" /> Add Subscription
@@ -145,31 +145,31 @@ const Subscription = () => {
             {/* Subscriptions Grid */}
             <div className="grid xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 gap-5">
                 {subscriptions.map((subscription) => (
-                    <div key={subscription.id} className="border-2 border-[#2cb5eb]  rounded-lg overflow-hidden">
+                    <div key={subscription.id} className="border-2 border-[#344f47]  rounded-lg overflow-hidden">
                         <div className='p-5'>
-                            <h2 className=" text-3xl font-semibold text-[#2cb5eb] flex items-center gap-2
+                            <h2 className=" text-3xl font-semibold text-[#344f47] flex items-center gap-2
                             ">
-                                <div className='h-10 w-10 rounded-full bg-[#2cb5eb] text-white flex justify-center items-center'>
+                                <div className='h-10 w-10 rounded-full bg-[#344f47] text-white flex justify-center items-center'>
                                     <AiFillCrown className="size-6" />
                                 </div>
                                 {subscription.name}
                             </h2>
                             <h3 className='text-2xl font-semibold mt-5'>Unite type</h3>
-                            <p className=" mt-2 font-semibold text-xl gap-2   flex items-center"><FaRegCircleCheck className='text-[#2cb5eb]' /> {subscription.unitType}</p>
+                            <p className=" mt-2 font-semibold text-xl gap-2   flex items-center"><FaRegCircleCheck className='text-[#344f47]' /> {subscription.unitType}</p>
                         </div>
-                        <div className='border-t-2 border-b-2 border-[#2cb5eb] py-2 text-center my-3'>
-                            <p className=" text-5xl font-semibold text-[#2cb5eb] gap-2  ">  {subscription.price} <span className='text-base font-semibold text-black '>/ {subscription.type}</span></p>
+                        <div className='border-t-2 border-b-2 border-[#344f47] py-2 text-center my-3'>
+                            <p className=" text-5xl font-semibold text-[#344f47] gap-2  ">  {subscription.price} <span className='text-base font-semibold text-black '>/ {subscription.type}</span></p>
                         </div>
                         <div className=" gap-3 p-5 ">
                             <button
                                 onClick={() => handleDelete(subscription)}
-                                className="w-full py-3 mb-2 px-6 border border-[#2cb5eb] text-[#2cb5eb] rounded-lg"
+                                className="w-full py-3 mb-2 px-6 border border-[#344f47] text-[#344f47] rounded-lg"
                             >
                                 Delete
                             </button>
                             <button
                                 onClick={() => showModal(true, subscription)}
-                                className="w-full py-3 px-6 border bg-[#2cb5eb] text-white rounded-lg"
+                                className="w-full py-3 px-6 border bg-[#344f47] text-white rounded-lg"
                             >
                                 Edit Package
                             </button>
@@ -232,7 +232,7 @@ const Subscription = () => {
                     </div>
 
 
-                    <button type="primary" htmlType="submit" className="w-full py-3 px-5 rounded-lg bg-[#2cb5eb] text-white">
+                    <button type="primary" htmlType="submit" className="w-full py-3 px-5 rounded-lg bg-[#344f47] text-white">
                         {isEditing ? 'Update Subscription' : 'Add Subscription'}
                     </button>
                 </form>
