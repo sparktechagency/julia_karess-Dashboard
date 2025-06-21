@@ -17,7 +17,7 @@ import { GrDocumentImage } from "react-icons/gr";
 import { RxCross1 } from "react-icons/rx";
 import logoimage from '/public/logo/Logo-Orange.png';
 import { AiFillCrown } from "react-icons/ai";
-import { PiBuildingApartmentLight } from "react-icons/pi";
+import { PiBabyFill, PiBuildingApartmentLight } from "react-icons/pi";
 
 const sidebarItems = [
   {
@@ -31,11 +31,11 @@ const sidebarItems = [
     icon: <FaUsers className="size-6" />,
   },
 
-  // {
-  //   path: "/apartment-owner",
-  //   name: "Apartment Owner",
-  //   icon: <MdOutlineHomeWork className="size-6" />,
-  // },
+  {
+    path: "/baby-cuse",
+    name: "Baby Cuse",
+    icon: <PiBabyFill className="size-6" />,
+  },
   // {
   //   path: "/apartment-creator",
   //   name: "Apartment Creator",

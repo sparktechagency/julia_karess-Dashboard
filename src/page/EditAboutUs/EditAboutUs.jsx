@@ -36,7 +36,7 @@ const EditAboutUs = () => {
       message.error("Failed to update About Us.");
     }
   };
- 
+
 
   return (
     <section className="w-full h-full min-h-screen">

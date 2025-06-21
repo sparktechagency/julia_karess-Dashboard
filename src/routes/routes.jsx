@@ -47,12 +47,13 @@ import AllDocument from "../component/Main/AllDocument/AllDocument";
 import Lawyera from "../page/Lawyer/Lawyera";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import ApartmentCreatorCreate from "../page/Lawyer/ApartmentCreatorCreate";
-import ApartmentOwner from "../page/ApartmentOwner/ApartmentOwner";
-import Apartmentdetails from "../page/ApartmentOwner/Apartmentdetails";
+import ApartmentOwner from "../page/BabyCuse/BabyCuse";
+import Apartmentdetails from "../page/BabyCuse/BabyCusedetails";
 import SubscriptionUserList from "../page/Subscription/SubscriptionUserList";
 import ApartmentCreate from "../page/ApartmentCreate/ApartmentCreate";
 import ApartmentCreateAddNew from "../page/ApartmentCreate/ApartmentCreateAddNew";
 import ApartmentCreateDetials from "../page/ApartmentCreate/ApartmentCreateDetials";
+import BabyCuse from "../page/BabyCuse/BabyCuse";
 
 
 
@@ -82,8 +83,8 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "apartment-owner",
-        element: <ApartmentOwner />,
+        path: "baby-cuse",
+        element: <BabyCuse />,
       },
       {
         path: "apartment-owner/apartment-details/:id",
@@ -136,7 +137,7 @@ const router = createBrowserRouter([
         path: "settings",
         element: <SettingsPage />,
       },
-      
+
       {
         path: "settings/personal-info",
         element: <Personalinfo />,
