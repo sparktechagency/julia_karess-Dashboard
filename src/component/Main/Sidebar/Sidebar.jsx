@@ -31,21 +31,21 @@ const sidebarItems = [
     icon: <FaUsers className="size-6" />,
   },
 
-  {
-    path: "/apartment-owner",
-    name: "Apartment Owner",
-    icon: <MdOutlineHomeWork className="size-6" />,
-  },
-  {
-    path: "/apartment-creator",
-    name: "Apartment Creator",
-    icon: <FaUsers className="size-6" />,
-  },
-  {
-    path: "/apartment-create",
-    name: "Apartment Create",
-    icon: <PiBuildingApartmentLight className="size-6" />,
-  },
+  // {
+  //   path: "/apartment-owner",
+  //   name: "Apartment Owner",
+  //   icon: <MdOutlineHomeWork className="size-6" />,
+  // },
+  // {
+  //   path: "/apartment-creator",
+  //   name: "Apartment Creator",
+  //   icon: <FaUsers className="size-6" />,
+  // },
+  // {
+  //   path: "/apartment-create",
+  //   name: "Apartment Create",
+  //   icon: <PiBuildingApartmentLight className="size-6" />,
+  // },
 
 
   {
