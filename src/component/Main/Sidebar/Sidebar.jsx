@@ -125,7 +125,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
         <ul className="flex flex-col gap-3 mt-10">
           {sidebarItems.map((item) => (
             <NavLink
-              key={item.name}
+              key={item.name} 
               to={item.path}
               onClick={toggleSidebar} // Close sidebar on link click
               className={({ isActive }) =>
