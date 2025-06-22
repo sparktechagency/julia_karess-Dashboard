@@ -53,14 +53,11 @@ const NewPassword = () => {
 
   return (
     <div className="w-full bg-[#fefaf4] h-full md:h-screen md:flex justify-around ">
-      
       <div className=" h-[70%] md:w-[600px] w-[70%] mx-auto my-20 border-2 border-[#b5b5b5] rounded-xl md:my-28 place-content-center px-5 py-10 gap-8 bg-[#fefaf4] md:mx-10">
 
         <div className="">
-
           <div className="mb-5">
             <img src={logoimage} className="w-[100px] mx-auto mb-5" alt="" />
-
 
             <h1 className="font-semibold text-xl flex items-center gap-2">
               <Link to="/auth/login">
