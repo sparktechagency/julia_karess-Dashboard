@@ -118,37 +118,7 @@ const router = createBrowserRouter([
 
 
 
-      {
-        path: "apartment-owner/apartment-details/:id",
-        element: <Apartmentdetails />,
-      },
-
-
-
-      {
-        path: "apartment-creator",
-        element: <Lawyera />,
-      },
-
-      {
-        path: "apartment-creator/create",
-        element: <ApartmentCreatorCreate />,
-      },
-
-
-      {
-        path: "apartment-create",
-        element: <ApartmentCreate />,
-      },
-      {
-        path: "apartment-create/:id",
-        element: <ApartmentCreateDetials />,
-      },
-      {
-        path: "apartment-create/create",
-        element: <ApartmentCreateAddNew />,
-      },
-
+    
 
 
       {

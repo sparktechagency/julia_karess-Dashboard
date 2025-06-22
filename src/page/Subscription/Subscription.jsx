@@ -189,6 +189,7 @@ const Subscription = () => {
                     <div className="mb-4">
                         <span className="block mb-2 font-semibold">Subscription Name</span>
                         <Input
+                            className="w-full py-3"
                             placeholder="Enter subscription name"
                             value={subscriptionName}
                             onChange={(e) => setSubscriptionName(e.target.value)}
@@ -198,7 +199,7 @@ const Subscription = () => {
                     <div className="my-3">
                         <span className="block mb-2 font-semibold">Unit Type</span>
                         <Select
-                            className="w-full"
+                            className="w-full h-12"
                             value={unitType}
                             onChange={(value) => setUnitType(value)}
                         >
@@ -211,7 +212,7 @@ const Subscription = () => {
                     <div className="my-3">
                         <span className="block mb-2 font-semibold">Monthly Type</span>
                         <Select
-                            className="w-full"
+                            className="w-full h-12"
                             value={monthlyType}
                             onChange={(value) => setMonthlyType(value)}
                         >
@@ -224,6 +225,7 @@ const Subscription = () => {
                     <div className="mb-4">
                         <span className="block mb-2 font-semibold">Subscription Price</span>
                         <Input
+                            className='w-full py-3'
                             placeholder="Enter price"
                             value={price}
                             type="number"
