@@ -6,28 +6,28 @@ import { Link } from 'react-router-dom';
 import { UploadOutlined } from '@ant-design/icons';
 import { IoCloudUploadOutline } from 'react-icons/io5';
 
-const BabyCusedetails = () => {
+const BabyCuseSouthingdetails = () => {
     const [babyCues, setBabyCues] = useState([
         {
             id: 1,
             title: 'Fist clenching',
             description:
                 'Clenched fists are often a sign of stress or discomfort. Baby may be hungry, overstimulated, or adjusting to a new sensation.',
-            image: null, // Add image field
+            image: '/category/Rectangle31569.png', // Add image field
         },
         {
             id: 2,
             title: 'Fist clenching',
             description:
                 'Clenched fists are often a sign of stress or discomfort. Baby may be hungry, overstimulated, or adjusting to a new sensation.',
-            image: null, // Add image field
+            image: '/category/Rectangle31569.png', // Add image field
         },
         {
             id: 3,
             title: 'Fist clenching',
             description:
                 'Clenched fists are often a sign of stress or discomfort. Baby may be hungry, overstimulated, or adjusting to a new sensation.',
-            image: null, // Add image field
+            image: '/category/Rectangle31569.png', // Add image field
         },
     ]);
     const [isModalVisible, setIsModalVisible] = useState(false);
@@ -120,22 +120,22 @@ const BabyCusedetails = () => {
                 </button>
             </div>
 
-            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start gap-4">
+            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 items-start gap-4">
                 {babyCues.map((cue) => (
                     <div
                         key={cue.id}
-                        className=" border-2 border-[#344f47] shadow-[0_0_10px_0_rgba(0,0,0,0.2)] p-4 rounded-lg hover:bg-[#f3f3f3] cursor-pointer"
+                        className="border-2 border-[#f9e4c8] shadow-lg p-2 rounded-lg hover:bg-[#f3f3f3] cursor-pointer"
                     >
-                        <div>
-                            <h3 className="text-xl font-semibold text-[#344f47]">{cue.title}</h3>
-                            <p className="text-sm text-gray-500">{cue.description}</p>
-                            {cue.image && (
-                                <img
-                                    src={cue.image.url}
-                                    alt={cue.title}
-                                    className="w-full h-40 object-cover rounded-lg mt-4"
-                                />
-                            )}
+                        <div className="mb-4">
+                            <img
+                                src={cue.image}
+                                alt={cue.title}
+                                className="w-full  object-cover rounded-md"
+                            />
+                        </div>
+                        <div className='text-center my-4'>
+                            <h3 className="text-3xl font-semibold text-[#344f47]">{cue.title}</h3>
+                            <p className="text-sm text-gray-500 mt-2">{cue.description}</p>
                         </div>
 
                         <hr className="my-2" />
@@ -143,13 +143,13 @@ const BabyCusedetails = () => {
                         <div className="flex justify-end gap-2">
                             <button
                                 onClick={() => handleEditClick(cue)}
-                                className="text-[#fff] h-10 w-10 bg-[#344f47]  rounded-full flex items-center justify-center hover:bg-[#2c3e50] transition-colors duration-200"
+                                className="text-white h-10 w-10 bg-[#344f47] rounded-full flex items-center justify-center hover:bg-[#2c3e50] transition-colors duration-200"
                             >
                                 <RiEdit2Line size={20} />
                             </button>
                             <button
                                 onClick={() => handleDeleteClick(cue.id)}
-                                className="text-[#fff] h-10 w-10 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors duration-200"
+                                className="text-white h-10 w-10 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors duration-200"
                             >
                                 <RiDeleteBin6Line size={20} />
                             </button>
@@ -216,4 +216,4 @@ const BabyCusedetails = () => {
     );
 };
 
-export default BabyCusedetails;
+export default BabyCuseSouthingdetails;

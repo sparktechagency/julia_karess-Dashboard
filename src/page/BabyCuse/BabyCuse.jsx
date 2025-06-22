@@ -1,88 +1,54 @@
-import { message, Modal, Input } from 'antd';
-import React, { useState } from 'react';
+import React from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
-import { RiDeleteBin6Line } from 'react-icons/ri';
+import { FiVolume2, FiSmile } from 'react-icons/fi'; // You can use any other icon you prefer
 import { Link } from 'react-router-dom';
 
 const BabyCuse = () => {
-    const [isModalVisible, setIsModalVisible] = useState(false); // State to manage modal visibility
-    const [monthName, setMonthName] = useState(''); // State to manage the month input
-
-    const handleDeleter = () => {
-        // Handle the delete action here
-        console.log("Delete button clicked");
-        message.success('Month deleted successfully!');
-    }
-
-    const showModal = () => {
-        setIsModalVisible(true); // Show the modal
-    };
-
-    const handleCancel = () => {
-        setIsModalVisible(false); // Close the modal
-    };
-
-    const handleOk = () => {
-        // Logic for adding a new month
-        if (!monthName) {
-            message.error('Please enter a month name!');
-            return;
-        }
-        console.log("New Month Added:", monthName);
-        message.success('New Month added successfully!');
-        setMonthName(''); // Reset the month name
-        setIsModalVisible(false); // Close the modal
-    };
-
     return (
-        <div>
-            <div className='flex justify-between items-center p-4 '>
-                <Link className='text-2xl font-bold text-[#344f47] hover:text-[#344f47] flex items-center gap-2' to="/baby-cuse">
-                    <FaArrowLeft />Milestone
+        <div className="p-4">
+            {/* Header Section with Back Button */}
+            <div className="flex justify-between items-center py-4 mb-5">
+                <Link className="text-2xl font-bold text-[#344f47] hover:text-[#344f47] flex items-center gap-2" to="/baby-cuse">
+                    <FaArrowLeft />
+                    <h1>Baby Cues</h1>
                 </Link>
-                <div>
-                    <button onClick={showModal} className='bg-[#344f47] hover:bg-[#344f47] text-white font-bold py-3 px-10 rounded-lg'>
-                        Add Month
-                    </button>
-                </div>
             </div>
 
-            <div className='flex flex-wrap gap-4 p-4 '>
-                {
-                    [...Array(6)].map((_, i) => (
-                        <div key={i} className='h-[140px] relative group rounded-lg w-[140px] border border-[#344f47] cursor-pointer hover:bg-[#344f47] flex items-center justify-center'>
-                            <h1 className='text-xl font-semibold text-[#344f47] group-hover:text-white px-4'>Month {i + 1}</h1>
-                            <button onClick={handleDeleter} className='absolute bottom-1 w-8 h-8 bg-white rounded-full left-1/2 items-center justify-center transform -translate-x-1/2 hidden group-hover:flex'>
-                                <RiDeleteBin6Line className=' text-[#344f47] group-hover:text-[#344f47]' />
-                            </button>
-                        </div>))
-                }
-            </div>
+            {/* Cards Section */}
+            <div className="flex gap-4 flex-wrap">
 
-            {/* Modal for adding a new month */}
-            <Modal
-                title="Add New Month"
-                visible={isModalVisible}
-                onOk={handleOk}
-                onCancel={handleCancel}
-                // okText="Add Month"
-                // cancelText="Cancel"
-                footer={null}
-            >
-                <div>
-                    <Input
-                        className='py-3 px-4 border border-[#344f47] rounded-lg w-full'
-                        value={monthName}
-                        onChange={(e) => setMonthName(e.target.value)} // Update month name on input change
-                        placeholder="Enter month name"
-                    />
-                    <div className='flex justify-end mt-4'>
-                        <button className='bg-[#344f47] hover:bg-[#344f47] text-white font-bold py-3 px-10 rounded-lg'>Add Month </button>
+                {/* Baby Cues Card */}
+                <Link to="/baby-cuse/baby-case-details" className="relative w-60 h-28 rounded-lg border border-[#344f47] bg-[#f1f8f5] cursor-pointer flex gap-2">
+                    <div className=" bg-[#344f47] p-2 text-white rounded-l-lg flex items-center justify-center">
+                        <img className='w-10' src="/category/cuse.png" alt="" />
                     </div>
-                </div>
-            </Modal>
+                    <div className='h-full flex items-center w-full  justify-center text-[#344f47] text-xl'>
+                        <p className='!font-bold'>Baby Cues</p>
+                    </div>
+                </Link>
+
+                {/* Sound Card */}
+                <Link to="/baby-cuse/sound-details" className="relative w-60 h-28 rounded-lg border border-[#344f47] bg-[#f1f8f5] cursor-pointer flex gap-2">
+                    <div className=" bg-[#ccc49d] p-2 text-white rounded-l-lg flex items-center justify-center">
+                        <img className='w-10' src="/category/Volume-down.png" alt="" />
+                    </div>
+                    <div className='h-full flex items-center w-full  justify-center text-[#344f47] text-xl'>
+                        <p className='!font-bold'>Sound</p>
+                    </div>
+                </Link>
+                {/* Sound Card */}
+                <Link to="/baby-cuse/southing-details" className="relative w-60 h-28 rounded-lg border border-[#344f47] bg-[#f1f8f5] cursor-pointer flex gap-2">
+                    <div className=" bg-[#f9e4c8] p-2 text-white rounded-l-lg flex items-center justify-center">
+                        <img className='w-10' src="/category/Southing.png" alt="" />
+                    </div>
+                    <div className='h-full flex items-center w-full  justify-center text-[#344f47] text-xl'>
+                        <p className='!font-bold'>Southing</p>
+                    </div>
+                </Link>
+
+            </div>
         </div>
     );
-}
+};
 
 export default BabyCuse;

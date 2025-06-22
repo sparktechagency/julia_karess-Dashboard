@@ -18,6 +18,7 @@ import { RxCross1 } from "react-icons/rx";
 import logoimage from '/public/logo/Logo-Orange.png';
 import { AiFillCrown } from "react-icons/ai";
 import { PiBabyFill, PiBuildingApartmentLight } from "react-icons/pi";
+import { TfiCup } from "react-icons/tfi";
 
 const sidebarItems = [
   {
@@ -36,6 +37,12 @@ const sidebarItems = [
     name: "Baby Cuse",
     icon: <PiBabyFill className="size-6" />,
   },
+  {
+    path: "/milestone",
+    name: "Milestone",
+    icon: <TfiCup className="size-6" />,
+  },
+
   // {
   //   path: "/apartment-creator",
   //   name: "Apartment Creator",
@@ -98,8 +105,8 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
           onClick={() => setShowModal(true)}
           className="flex items-center gap-1 font-bold px-10 py-4 text-black  ml-6 mt-5"
         >
-          <IoIosLogOut className="size-8  p-1 text-white rounded-md" />
-          <span className="text-white">Logout</span>
+          <IoIosLogOut className="size-8  p-1 text-[#344f47] rounded-md" />
+          <span className="text-[#344f47] ">Logout</span>
         </button>
 
       </div>
@@ -139,8 +146,8 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
           }}
           className="flex items-center gap-2 px-10 ml-5 mt-5"
         >
-          <IoIosLogOut className="size-8   p-1 text-white rounded-md" />
-          <span className="text-black">Logout</span>
+          <IoIosLogOut className="size-8   p-1 text-[#344f47] rounded-md" />
+          <span className="text-[#344f47] ">Logout</span>
         </button>
       </div>
 

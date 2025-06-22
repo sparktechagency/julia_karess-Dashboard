@@ -54,6 +54,11 @@ import ApartmentCreate from "../page/ApartmentCreate/ApartmentCreate";
 import ApartmentCreateAddNew from "../page/ApartmentCreate/ApartmentCreateAddNew";
 import ApartmentCreateDetials from "../page/ApartmentCreate/ApartmentCreateDetials";
 import BabyCuse from "../page/BabyCuse/BabyCuse";
+import BabyCusedetails from "../page/BabyCuse/BabyCusedetails";
+import Milestone from "../page/Milestone/Milestone";
+import MilestoneDetails from "../page/Milestone/MilestoneDetails";
+import BabyCuseSounddetails from "../page/BabyCuse/BabyCuseSounddetails";
+import BabyCuseSouthingdetails from "../page/BabyCuse/BabyCuseSouthingdetails";
 
 
 
@@ -86,6 +91,33 @@ const router = createBrowserRouter([
         path: "baby-cuse",
         element: <BabyCuse />,
       },
+      {
+        path: "baby-cuse/baby-case-details",
+        element: <BabyCusedetails />,
+      },
+      {
+        path: "baby-cuse/sound-details",
+        element: <BabyCuseSounddetails />,
+      },
+      {
+        path: "baby-cuse/southing-details",
+        element: <BabyCuseSouthingdetails />,
+      },
+
+
+
+      {
+        path: "milestone",
+        element: <Milestone />,
+      },
+      {
+        path: "milestone/:id",
+        element: <MilestoneDetails />,
+      },
+
+
+
+
       {
         path: "apartment-owner/apartment-details/:id",
         element: <Apartmentdetails />,

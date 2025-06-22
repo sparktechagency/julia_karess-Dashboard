@@ -1,32 +1,35 @@
+
+
 import React, { useState } from 'react';
 import { Modal, Input, Button, message, Space, Form, Upload } from 'antd';
 import { FaArrowLeft } from 'react-icons/fa';
 import { RiDeleteBin6Line, RiEdit2Line } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { UploadOutlined } from '@ant-design/icons';
-import { IoCloudUploadOutline } from 'react-icons/io5';
+import { IoCloudUploadOutline, IoSearch } from 'react-icons/io5';
+import { FaCirclePlay } from 'react-icons/fa6';
 
-const BabyCusedetails = () => {
+const BabyCuseSounddetails = () => {
     const [babyCues, setBabyCues] = useState([
         {
             id: 1,
-            title: 'Fist clenching',
+            title: 'Cat sound',
             description:
-                'Clenched fists are often a sign of stress or discomfort. Baby may be hungry, overstimulated, or adjusting to a new sensation.',
+                '00.59',
             image: null, // Add image field
         },
         {
             id: 2,
-            title: 'Fist clenching',
+            title: 'Cat sound',
             description:
-                'Clenched fists are often a sign of stress or discomfort. Baby may be hungry, overstimulated, or adjusting to a new sensation.',
+                '00.42',
             image: null, // Add image field
         },
         {
             id: 3,
-            title: 'Fist clenching',
+            title: 'Cat sound',
             description:
-                'Clenched fists are often a sign of stress or discomfort. Baby may be hungry, overstimulated, or adjusting to a new sensation.',
+                '00.59',
             image: null, // Add image field
         },
     ]);
@@ -112,30 +115,46 @@ const BabyCusedetails = () => {
                     <FaArrowLeft />
                     <h1>Baby Cues</h1>
                 </Link>
-                <button
-                    onClick={handleAddClick}
-                    className="bg-[#344f47] text-white font-bold py-3 px-10 rounded-lg"
-                >
-                    Add Baby Cue
-                </button>
+                <div className='flex items-center gap-4'>
+                    {/* search input field raw input field  */}
+                    <div className='relative'>
+                        <input type="text" placeholder="Search..." className='border border-[#344f47] px-4 py-2 rounded-full ' />
+                        <div>
+                            <IoSearch className='absolute right-4 top-3' />
+                        </div>
+                    </div>
+
+                    <button
+                        onClick={handleAddClick}
+                        className="bg-[#344f47] text-white font-bold py-3 px-10 rounded-lg"
+                    >
+                        Add Baby Cue
+                    </button>
+                </div>
             </div>
 
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start gap-4">
                 {babyCues.map((cue) => (
                     <div
                         key={cue.id}
-                        className=" border-2 border-[#344f47] shadow-[0_0_10px_0_rgba(0,0,0,0.2)] p-4 rounded-lg hover:bg-[#f3f3f3] cursor-pointer"
+                        className=" border-2 border-[#344f47] shadow-[0_0_10px_0_rgba(0,0,0,0.2)] p-4 rounded-2xl hover:bg-[#344f4718] cursor-pointer"
                     >
-                        <div>
-                            <h3 className="text-xl font-semibold text-[#344f47]">{cue.title}</h3>
-                            <p className="text-sm text-gray-500">{cue.description}</p>
-                            {cue.image && (
-                                <img
-                                    src={cue.image.url}
-                                    alt={cue.title}
-                                    className="w-full h-40 object-cover rounded-lg mt-4"
-                                />
-                            )}
+                        <div className='flex gap-4 items-start justify-between mb-4'>
+                            <img className='w-20' src="/category/Rectangle31555.png" alt="" />
+                            <div>
+                                <h3 className="text-2xl font-semibold text-[#344f47] ">
+                                    {cue.title}
+                                </h3>
+                                <p className="text-sm text-gray-500">{cue.description}</p>
+                                {cue.image && (
+                                    <img
+                                        src={cue.image.url}
+                                        alt={cue.title}
+                                        className="w-full h-40 object-cover rounded-lg "
+                                    />
+                                )}
+                            </div>
+                            <FaCirclePlay className='ml-2 text-2xl text-[#344f47]' />
                         </div>
 
                         <hr className="my-2" />
@@ -216,4 +235,4 @@ const BabyCusedetails = () => {
     );
 };
 
-export default BabyCusedetails;
+export default BabyCuseSounddetails;
