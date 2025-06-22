@@ -98,7 +98,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               {item?.icon}
               <h>{item.name}</h>
             </NavLink>
-          ))} 
+          ))}
         </ul>
 
         <button
@@ -111,7 +111,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
 
       </div>
 
-      {/* Mobile Sidebar */} 
+      {/* Mobile Sidebar */}
       <div
         className={`fixed top-0 overflow-y-auto left-0 z-40 w-64 h-full bg-[#344f47] shadow-lg transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           } transition-transform duration-300 ease-in-out md:hidden`}
@@ -125,7 +125,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
         <ul className="flex flex-col gap-3 mt-10">
           {sidebarItems.map((item) => (
             <NavLink
-              key={item.name} 
+              key={item.name}
               to={item.path}
               onClick={toggleSidebar} // Close sidebar on link click
               className={({ isActive }) =>
@@ -135,11 +135,11 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
             >
               {item?.icon}
               <h>{item.name}</h>
-            </NavLink> 
+            </NavLink>
           ))}
         </ul>
 
-        <button 
+        <button
           onClick={() => {
             setShowModal(true);
             toggleSidebar();
