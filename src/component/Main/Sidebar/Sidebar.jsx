@@ -139,7 +139,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
           ))}
         </ul>
 
-        <button
+        <button 
           onClick={() => {
             setShowModal(true);
             toggleSidebar();
