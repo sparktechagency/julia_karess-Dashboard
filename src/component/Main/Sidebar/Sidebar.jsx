@@ -98,7 +98,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               {item?.icon}
               <h>{item.name}</h>
             </NavLink>
-          ))}
+          ))} 
         </ul>
 
         <button
