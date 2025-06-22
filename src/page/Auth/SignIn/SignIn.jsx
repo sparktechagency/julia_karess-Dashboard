@@ -49,13 +49,13 @@ const SignIn = () => {
   };
 
   return (
-    <div className="w-full  h-full md:h-screen md:flex justify-around overflow-visible">
+    <div className="w-full bg-[#fefaf4] h-full md:h-screen md:flex justify-around overflow-visible">
       {/* <img
             src={authLogo}
             className="w-[147px] h-[144px] mx-auto md:my-20 md:mx-5"
             alt="Sign in illustration"
       /> */}
-      <div className=" h-[70%] md:w-[600px] w-[70%] mx-auto my-20 border-shadow rounded-md md:my-28 place-content-center px-5 py-10 gap-8 bg-white md:mx-10">
+      <div className=" h-[70%] md:w-[600px] w-[70%] mx-auto my-20 border-2 border-[#b5b5b5] rounded-xl md:my-28 place-content-center px-5 py-10 gap-8 bg-[#fefaf4] md:mx-10">
 
         <div className=" md:px-2">
           <div className="mb-8">

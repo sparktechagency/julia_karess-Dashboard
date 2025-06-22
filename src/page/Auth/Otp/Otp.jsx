@@ -55,13 +55,13 @@ const Otp = () => {
     }
   };
   return (
-    <div className="w-full  h-full md:h-screen md:flex justify-around ">
+    <div className="w-full bg-[#fefaf4] h-full md:h-screen md:flex justify-around ">
       {/* <img
           src={authLogo}
           className="w-[147px] h-[152px] mx-auto md:my-20 md:mx-5"
           alt="Sign in illustration"
     /> */}
-      <div className=" h-[70%] md:w-[600px] w-[70%] mx-auto my-20 border-shadow rounded-md md:my-28 place-content-center px-5 py-10 gap-8 bg-white md:mx-10">
+      <div className=" h-[70%] md:w-[600px] w-[70%] mx-auto my-20 border-2 border-[#b5b5b5] rounded-xl md:my-28 place-content-center px-5 py-10 gap-8 bg-[#fefaf4] md:mx-10">
 
         <div className="">
           <div className="mb-5 space-y-5">
