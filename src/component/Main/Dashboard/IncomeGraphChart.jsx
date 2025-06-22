@@ -41,7 +41,8 @@ const IncomeGraphChart = () => {
     style: {
       lineWidth: 2,
     },
-    // Enable the legend to distinguish between income and expenses
+    color: ['#4caf50', '#ff9800'], // Set distinct colors for income (green) and expenses (orange)
+
     legend: {
       position: 'top-left',
       itemName: {
@@ -50,13 +51,15 @@ const IncomeGraphChart = () => {
         },
       },
     },
-    // Define the colors explicitly based on the `type`
-    color: (datum) => {
-      if (datum.type === 'income') {
-        return '#4caf50'; // Green color for "income"
-      } else if (datum.type === 'expenses') {
-        return '#ff9800'; // Orange color for "expenses"
-      }
+    tooltip: {
+      customContent: (title, items) => {
+        return (
+          <div style={{ padding: '10px', background: 'white', borderRadius: '5px' }}>
+            <p><strong>{title}</strong></p>
+            <p>{items[0]?.name}: ${items[0]?.value.toLocaleString()}</p>
+          </div>
+        );
+      },
     },
   };
 
