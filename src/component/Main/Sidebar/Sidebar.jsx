@@ -111,7 +111,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
 
       </div>
 
-      {/* Mobile Sidebar */}
+      {/* Mobile Sidebar */} 
       <div
         className={`fixed top-0 overflow-y-auto left-0 z-40 w-64 h-full bg-[#344f47] shadow-lg transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           } transition-transform duration-300 ease-in-out md:hidden`}
