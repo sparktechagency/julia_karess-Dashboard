@@ -25,7 +25,7 @@ const IncomeGraphChart = () => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="month" />
           <YAxis />
-          <Tooltip contentStyle={{ backgroundColor: '#344f47c5', color: 'white', borderRadius: '10px' }} />
+          <Tooltip contentStyle={{ backgroundColor: '#888', color: 'white', borderRadius: '10px' }} />
           <Legend />
 
           {/* Line for Income */}

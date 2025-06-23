@@ -117,10 +117,6 @@ const router = createBrowserRouter([
 
 
 
-
-    
-
-
       {
         path: "subscription",
         element: <Subscription />,
