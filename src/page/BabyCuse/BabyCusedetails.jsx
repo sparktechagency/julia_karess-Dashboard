@@ -13,21 +13,21 @@ const BabyCusedetails = () => {
             title: 'Fist clenching',
             description:
                 'Clenched fists are often a sign of stress or discomfort. Baby may be hungry, overstimulated, or adjusting to a new sensation.',
-            image: null, // Add image field
+            image: '/category/12.png', // Add image field 
         },
         {
             id: 2,
             title: 'Fist clenching',
             description:
                 'Clenched fists are often a sign of stress or discomfort. Baby may be hungry, overstimulated, or adjusting to a new sensation.',
-            image: null, // Add image field
+            image: '/category/12.png', // Add image field 
         },
         {
             id: 3,
             title: 'Fist clenching',
             description:
                 'Clenched fists are often a sign of stress or discomfort. Baby may be hungry, overstimulated, or adjusting to a new sensation.',
-            image: null, // Add image field
+            image: '/category/12.png', // Add image field 
         },
     ]);
     const [isModalVisible, setIsModalVisible] = useState(false);
@@ -127,15 +127,15 @@ const BabyCusedetails = () => {
                         className=" border-2 border-[#344f47] shadow-[0_0_10px_0_rgba(0,0,0,0.2)] p-4 rounded-lg hover:bg-[#f3f3f3] cursor-pointer"
                     >
                         <div>
-                            <h3 className="text-xl font-semibold text-[#344f47]">{cue.title}</h3>
+                            <h3 className="text-xl mb-3 font-semibold text-[#344f47] flex items-center gap-2 "><img
+                                src={cue.image}
+                                alt={cue.title}
+                                className="w-8 object-cover rounded-lg "
+                            /> 
+                            {cue.title}
+                            </h3>
                             <p className="text-sm text-gray-500">{cue.description}</p>
-                            {cue.image && (
-                                <img
-                                    src={cue.image.url}
-                                    alt={cue.title}
-                                    className="w-full h-40 object-cover rounded-lg mt-4"
-                                />
-                            )}
+
                         </div>
 
                         <hr className="my-2" />
