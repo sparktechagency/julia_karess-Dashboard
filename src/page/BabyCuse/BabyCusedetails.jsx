@@ -129,7 +129,7 @@ const BabyCusedetails = () => {
                         <div>
                             <h3 className="text-xl mb-3 font-semibold text-[#344f47] flex items-center gap-2 "><img
                                 src={cue.image}
-                                alt={cue.title} 
+                                alt={cue.title}
                                 className="w-8 object-cover rounded-lg "
                             />
                                 {cue.title}
